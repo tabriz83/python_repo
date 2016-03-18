@@ -5,7 +5,7 @@ import urllib.request
 import json
 import datetime
 import time
-#import facebook
+#import facebo
 
 
 def httprequest(url) :
@@ -65,22 +65,23 @@ if __name__ == "__main__":
 
     # url = "https://graph.facebook.com/v2.5/me/feed?fields=name%2Clink%2Cdescription%2Cpicture%2Cupdated_time&since="+dt+"&limit=5000&locale=kor&access_token="+access_token
 
-    f = open("d:/Github/Pages/umbrain/_posts/2016-03-17-Facebook_scrap.md", 'w', encoding='UTF-8')
-    # f = open("d:/Github/Pages/umbrain/_posts/"+dt+"-Facebook_scrap.md", 'w', encoding='UTF-8')
-    f.write(
-        "---\n"
-        "layout: post\n"
-        "cover: 'assets/images/cover3.jpg'\n"
-        "title: 2016-03-17-Facebook 정보 스크랩\n"
-        # "title: "+dt+" Facebook 정보 스크랩\n"
-        "date: "+now+"\n"
-        "tags: Unclassified\n"
-        "subclass: 'post tag-Unclassified'\n"
-        "categories: 'tabris'\n"
-        "navigation: True\n"
-        "logo: 'assets/images/logo.png'\n"
-        "---\n"
-        "\n"
-    )
-    httprequest(url)
-    f.close()
+f = open("/home/Blog_Posts/2016-03-17-Facebook_scrap.md", 'w')
+# f = open("/home/Blog_Posts/2016-03-17-Facebook_scrap.md", 'w', encoding='UTF-8')
+# f = open("/home/Blog_Posts/"+dt+"-Facebook_scrap.md", 'w', encoding='UTF-8')
+f.write(
+	"---\n"
+	"layout: post\n"
+	"cover: 'assets/images/cover3.jpg'\n"
+	"title: 2016-03-17-Facebook 정보 스크랩\n"
+	# "title: "+dt+" Facebook 정보 스크랩\n"
+	"date: "+now+"\n"
+	"tags: Unclassified\n"
+	"subclass: 'post tag-Unclassified'\n"
+	"categories: 'tabris'\n"
+	"navigation: True\n"
+	"logo: 'assets/images/logo.png'\n"
+	"---\n"
+	"\n"
+)
+httprequest(url)
+f.close()
